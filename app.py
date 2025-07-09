@@ -12,7 +12,7 @@ st.title("📊 Sales Analytics Dashboard")
 # Load Data
 @st.cache_data
 def load_data():
-    df = pd.read_csv("C://Users/NIKHIL KAMPELLI/OneDrive/Desktop/SalaDataAnalytics/sales_data.csv")
+    df = pd.read_csv("sales_data.csv")
     df['Date'] = pd.to_datetime(df['Date'])
     df['Total_Sales'] = df['Quantity'] * df['Price']
     df.dropna(inplace=True)
